@@ -1,0 +1,24 @@
+{
+  "name": "tomaszaruba/seznam-bot-detector",
+  "description": "Detect Seznam.cz bot crawling websites. Detection for page crawler and thumbnail screening bot.",
+  "type": "library",
+  "license": "MIT",
+  "tags": ["seznam, bot, bot detector, seznambot, image bot"],
+  "authors": [
+    {
+      "name": "Tomáš Záruba",
+      "homepage": "https://github.com/zarubatomas"
+    }
+  ],
+  "require": {
+    "php": ">=5.4"
+  },
+  "require-dev": {
+    "codeception/codeception": "^2.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "TomasZaruba\\SeznamBotDetector\\": "src"
+    }
+  }
+}
