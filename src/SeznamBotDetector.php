@@ -48,6 +48,10 @@ class SeznamBotDetector
      */
     public function isSeznamThumbnailBot($ip, $userAgent)
     {
+        if (!is_string($ip) || !is_string($userAgent)) {
+            throw new InvalidArgumentException();
+        }
+
         if (in_array($ip, $this->thumbnailBotIps) && strpos($userAgent, 'Seznam screenshot-generator') !== false) {
 
             return true;
@@ -65,6 +69,10 @@ class SeznamBotDetector
      */
     public function isSeznamBot($ip, $userAgent)
     {
+        if (!is_string($ip) || !is_string($userAgent)) {
+            throw new InvalidArgumentException();
+        }
+
         foreach ($this->botIdentificators as $identificator) {
             if (strpos($userAgent, $identificator) !== false) {
 
